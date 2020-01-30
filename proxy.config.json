@@ -1,0 +1,9 @@
+{
+  "/api/*": {
+    "target": "http://www.datasciencetoolkit.org/maps/api/geocode",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": { "^/api/": "" }
+  }
+}
