@@ -14,7 +14,7 @@ import {
   MatProgressSpinnerModule,
   MatDialogModule
 } from '@angular/material';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, SearchCityComponent],
@@ -30,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     MatProgressSpinnerModule,
     MatDialogModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

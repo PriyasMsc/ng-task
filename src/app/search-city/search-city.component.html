@@ -1,26 +1,32 @@
 <section class="center-content">
   <div class="marginTop30">
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
       <mat-form-field>
         <input
           type="text"
           matInput
           placeholder="Enter city"
-          ngModel
+          formControlName="city"
           name="city"
           required
-          #cityInput="ngModel"
         />
-        <mat-error *ngIf="cityInput.hasError('required')"
+      </mat-form-field>
+      <span
+        *ngIf="
+          searchForm.controls['city'].errors &&
+          !searchForm.controls['city'].pristine
+        "
+      >
+        <mat-error *ngIf="searchForm.controls['city'].errors.required"
           >City must not be empty</mat-error
         >
-      </mat-form-field>
+      </span>
       <div class="center-content">
         <button
           type="submit"
           mat-raised-button
           color="accent"
-          [disabled]="f.invalid"
+          [disabled]="!searchForm.valid"
         >
           Search
         </button>
