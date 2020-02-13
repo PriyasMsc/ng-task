@@ -1,10 +1,17 @@
-# HclTask
+# Ng Search for Latitude & Longitude based on city
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
+# Please follow the Steps below to Compile & Run the application:
+
+Download the git source (https://github.com/PriyasMsc/ng-task.git) in local.
+Do `npm install` in angularCLI environment.
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+we are not using `ng serve` due to we configured proxy for CORS
 
 ## Code scaffolding
 
