@@ -30,9 +30,6 @@ export class SearchCityComponent implements OnInit, OnDestroy {
   ngOnInit() {}
 
   onSubmit() {
-    this.searchForm.get('city').valueChanges.subscribe(val => {
-      this.forceReload();
-    });
     if (this.searchForm.valid) {
       this.spinner = true;
       this.formSubscription = this.searchCityService
@@ -55,9 +52,7 @@ export class SearchCityComponent implements OnInit, OnDestroy {
       alert('Enter city');
     }
   }
-  forceReload() {
-    this.searchCityService.forceReload();
-  }
+
   ngOnDestroy(): void {
     this.formSubscription.unsubscribe();
   }
