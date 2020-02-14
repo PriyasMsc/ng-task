@@ -9,6 +9,7 @@
           formControlName="city"
           name="city"
           required
+          (keyup)="return geoResult = ''"
         />
       </mat-form-field>
       <span
@@ -38,7 +39,10 @@
   <mat-spinner *ngIf="spinner" style="margin: 0 auto;"></mat-spinner>
 </div>
 
-<section class="center-content marginTop30" *ngIf="geoResult && !spinner">
+<section
+  class="center-content marginTop30"
+  *ngIf="geoResult && !spinner && searchForm.valid"
+>
   <mat-card>
     <mat-card-header *ngIf="geoResult.results?.length > 0">
       <mat-card-title class="center-content"
